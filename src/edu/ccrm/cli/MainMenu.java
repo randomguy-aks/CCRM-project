@@ -14,8 +14,8 @@ import java.util.Scanner;
 import java.util.UUID;
 
 /**
- * Console menu for CCRM.
- * Demonstrates loops, switch, labeled break, services integration.
+ * Console menu for CCRM
+ * Demonstrates loops, switch, labeled break, services integration
  */
 public class MainMenu {
 
@@ -67,6 +67,7 @@ public class MainMenu {
     }
 
     // ---------------- STUDENT MENU ----------------
+    // This is the student menu system
     private static void studentMenu(Scanner scanner) {
         boolean back = false;
         while (!back) {
@@ -119,6 +120,7 @@ public class MainMenu {
     }
 
     // ---------------- COURSE MENU ----------------
+    // This is the course menu system
     private static void courseMenu(Scanner scanner) {
         boolean back = false;
         while (!back) {
@@ -175,6 +177,7 @@ public class MainMenu {
     }
 
     // ---------------- ENROLLMENT MENU ----------------
+    // This is the enrollment menu service
     private static void enrollmentMenu(Scanner scanner) {
         boolean back = false;
         while (!back) {
@@ -218,7 +221,7 @@ public class MainMenu {
                 case "4" -> {
                     System.out.print("Student RegNo: ");
                     String reg = scanner.nextLine();
-                    transcriptService.printTranscriptByRegNo(reg); // ✅ now uses TranscriptService
+                    transcriptService.printTranscriptByRegNo(reg); 
                 }
                 case "0" -> back = true;
                 default -> System.out.println("Invalid option.");
@@ -227,6 +230,7 @@ public class MainMenu {
     }
 
     // ---------------- IMPORT/EXPORT MENU ----------------
+    // This is the import/export menu
     private static void importExportMenu(Scanner scanner) {
         System.out.println("\n--- Import / Export ---");
         System.out.println("1. Import students from CSV");
@@ -262,6 +266,7 @@ public class MainMenu {
     }
 
     // ---------------- BACKUP MENU ----------------
+    // This is the backup menu
     private static void backupMenu(Scanner scanner) {
         System.out.print("Enter source export folder path: ");
         String src = scanner.nextLine();
@@ -279,6 +284,7 @@ public class MainMenu {
     }
 
     // ---------------- REPORTS MENU ----------------
+    // This is where the reports of a student will be shown
     private static void reportsMenu(Scanner scanner) {
         System.out.println("\n--- Reports ---");
         System.out.println("1. GPA distribution");
@@ -296,7 +302,8 @@ public class MainMenu {
         }
     }
 
-    // ---------------- DEMO SEED DATA ----------------
+    // ---------------- DEMO DATA ----------------
+    // A demo data to show how the program would work
     private static void seedDemoData() {
         Student s1 = new Student("s-1", "Akshat Aditya", "akshat.24bey10140@vitbhopal.ac.in", "24BEY10140");
         Student s2 = new Student("s-2", "Devansh Mishra", "devansh.24bey10154@vitbhopal.ac.in", "23BEY10154");
